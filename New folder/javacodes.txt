@@ -1,0 +1,110 @@
+package sampleprogramsusingconditionsorloops;
+
+public class Oddoreven {
+
+	public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = reader.nextInt();
+
+        if(num % 2 == 0)
+            System.out.println(num + " is even");
+        else
+            System.out.println(num + " is odd");
+    }
+
+
+
+
+package sampleprogramsusingconditionsorloops;
+
+public class Reversalofanumber 
+	{  
+	public static void main(String[] args)   
+	{  
+	int number = 987654, reverse = 0;  
+	while(number != 0)   
+	{  
+	int remainder = number % 10;  
+	reverse = reverse * 10 + remainder;  
+	number = number/10;  
+	}  
+	System.out.println("The reverse of the given number is: " + reverse);  
+	}  
+
+	}
+
+
+
+package sampleprogramsusingconditionsorloops;
+
+public class Primeornot {
+
+	public static void main(String[] args) {
+		int i,m=0,flag=0;      
+		  int n=3;//it is the number to be checked    
+		  m=n/2;      
+		  if(n==0||n==1){  
+		   System.out.println(n+" is not prime number");      
+		  }else{  
+		   for(i=2;i<=m;i++){      
+		    if(n%i==0){      
+		     System.out.println(n+" is not prime number");      
+		     flag=1;      
+		     break;      
+		    }      
+		   }      
+		   if(flag==0)  { System.out.println(n+" is prime number"); }  
+		  }//end of else  
+		}    
+		// TODO Auto-generated method stub
+
+	}
+
+
+
+import java.util.Scanner;
+
+public class SimpleCalculator {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        double num1, num2, result;
+        char operator;
+
+        System.out.print("Enter first number: ");
+        num1 = input.nextDouble();
+
+        System.out.print("Enter an operator (+, -, *, /): ");
+        operator = input.next().charAt(0);
+
+        System.out.print("Enter second number: ");
+        num2 = input.nextDouble();
+
+        switch (operator) {
+            case '+':
+                result = num1 + num2;
+                break;
+            case '-':
+                result = num1 - num2;
+                break;
+            case '*':
+                result = num1 * num2;
+                break;
+            case '/':
+                if (num2 != 0) {
+                    result = num1 / num2;
+                } else {
+                    System.out.println("Error: Division by zero is not allowed.");
+                    return;
+                }
+                break;
+            default:
+                System.out.println("Error: Invalid operator.");
+                return;
+        }
+
+        System.out.println("Result: " + result);
+    }
+}
+
